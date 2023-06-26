@@ -81,14 +81,23 @@
         line-height: 42px;
     }
 
-    ytmusic-guide-entry-renderer[active] .title.ytmusic-guide-entry-renderer {
-        font-weight: 600;
-    }
-
     ytmusic-guide-entry-renderer[active] tp-yt-paper-item.ytmusic-guide-entry-renderer {
         background-color: rgba(0, 0, 0, 0);
     }
 
+    tp-yt-paper-item.ytmusic-guide-entry-renderer:hover {
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    ytmusic-guide-entry-renderer[is-collapsed] .title.ytmusic-guide-entry-renderer {
+        color: rgba(255, 255, 255, 0.5);
+        font-weight: 500;
+    }
+
+    ytmusic-guide-entry-renderer.style-scope.ytmusic-guide-section-renderer[active] yt-formatted-string.ytmusic-guide-entry-renderer,
+    ytmusic-guide-entry-renderer[is-collapsed] .title.ytmusic-guide-entry-renderer:hover {
+        color: rgba(255, 255, 255, 1);
+    }
 
     /* SIDEBAR MOVED TO HEADER (CONSIDER THAT SIDEBAR SHOULD BE COLLAPSED SINCE ITS BUTTON IN HEADER WILL BE HIDDEN)*/
     #content-wrapper.ytmusic-browse-response {
@@ -172,5 +181,55 @@
 
     #items.ytmusic-carousel {
         width: 95%;
+    }
+
+    /* OTHER RESOLUTIONS (WIP) */
+    @media (max-width: 1200px) {
+        div.style-scope.ytmusic-app#mini-guide {
+            margin-left: 65vw;
+        }
+
+        ytmusic-guide-entry-renderer[is-collapsed] .title.ytmusic-guide-entry-renderer {
+            font-size: 16px;
+        }
+
+        ytmusic-guide-entry-renderer.style-scope.ytmusic-guide-section-renderer {
+            margin-right: 0.5vw;
+        }
+    }
+
+    @media (max-width: 935px) {
+        .side-panel.modular.style-scope.ytmusic-player-page {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        #steering-chips.ytmusic-player-queue {
+            max-width: 100%;
+        }
+
+        div.style-scope.ytmusic-app#mini-guide {
+            margin-left: 20vw;
+        }
+
+        ytmusic-guide-entry-renderer.style-scope.ytmusic-guide-section-renderer {
+            margin-right: 3vw;
+        }
+
+        ytmusic-guide-entry-renderer[is-collapsed] .title.ytmusic-guide-entry-renderer {
+            font-size: 20px;
+        }
+    }
+
+    @media (min-width: 616px) and (max-width: 1149px) {
+        ytmusic-player[player-ui-state_=MINIPLAYER] {
+            --ytmusic-mini-player-height: 240px;
+        }
+    }
+
+    @media (max-width: 616px) {
+        ytmusic-player[player-ui-state_=MINIPLAYER] {
+            --ytmusic-mini-player-height: 180px;
+        }
     }
 }
