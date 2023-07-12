@@ -8,7 +8,7 @@ Features:
 - narrower navbar and player bar
 - removed sidebar
 - sidebar links moved to navigation
-- "upgrade" link is hidden
+- "upgrade" link, "cast to device" button are hidden
 
 <br>
 
