@@ -1,7 +1,8 @@
 @-moz-document domain(music.youtube.com) {
 
     /* MINIPLAYER */
-    ytmusic-player[player-ui-state_="MINIPLAYER"] {
+    ytmusic-player[player-ui-state_="MINIPLAYER"],
+    ytmusic-player[player-ui-state="MINIPLAYER"] {
         --ytmusic-mini-player-height: 320px;
         margin: 0 !important;
     }
@@ -15,7 +16,8 @@
         padding: 0;
     }
 
-    ytmusic-player#player[player-ui-state_="PLAYER_PAGE_OPEN"] {
+    ytmusic-player#player[player-ui-state_="PLAYER_PAGE_OPEN"],
+    ytmusic-player#player[player-ui-state="PLAYER_PAGE_OPEN"] {
         max-width: 100% !important;
         width: 100% !important;
         margin: 0 !important;
@@ -272,13 +274,17 @@
     }
 
     @media (min-width: 616px) and (max-width: 1149px) {
-        ytmusic-player[player-ui-state_=MINIPLAYER] {
+
+        ytmusic-player[player-ui-state_=MINIPLAYER],
+        ytmusic-player[player-ui-state=MINIPLAYER] {
             --ytmusic-mini-player-height: 240px;
         }
     }
 
     @media (max-width: 616px) {
-        ytmusic-player[player-ui-state_=MINIPLAYER] {
+
+        ytmusic-player[player-ui-state_=MINIPLAYER],
+        ytmusic-player[player-ui-state=MINIPLAYER] {
             --ytmusic-mini-player-height: 180px;
         }
     }
