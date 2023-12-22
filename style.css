@@ -17,7 +17,7 @@
     }
 
     video.video-stream.html5-main-video {
-        width: 100% !important;
+        /* width: 100% !important; */
         top: 150px;
     }
 
@@ -77,10 +77,6 @@
 
     ytmusic-app-layout#layout {
         height: 5vh;
-    }
-
-    video.video-stream.html5-main-video {
-        width: 100%;
     }
 
     .header-group.ytmusic-carousel-shelf-renderer {
